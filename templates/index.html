@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+
+</head>
+
+
+<body>
+ 
+
+  <div class="wrapper">
+	<h1>Predict whether this is a phishing website or not</h1>
+
+    
+    <form name= "myForm "action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="numbe" placeholder="Input number" required="required" />
+      <input type="text" name="ip" placeholder="Ip" required="required" />
+      <input type="text" name="lurl" placeholder="Long URL" required="required" />
+      <input type="text" name="surl" placeholder="Short URL" required="required" />
+    <input type="text" name="symbol" placeholder="Symbol" required="required" />
+    <input type="text" name="redirecting" placeholder="Redirecting" required="required" />
+    <input type="text" name="pre" placeholder="Prefix/Suffix" required="required" />
+    <input type="text" name="sd" placeholder="Sub Domain" required="required" />
+    <input type="text" name="https" placeholder="Https" required="required" />
+    <input type="text" name="len" placeholder="Length" required="required" />
+    <input type="text" name="fav" placeholder="Favicon" required="required" />
+    <input type="text" name="port" placeholder="port" required="required" />
+    <input type="text" name="hturl" placeholder="ht URL" required="required" />
+    <input type="text" name="rurl" placeholder="Request URL" required="required" />
+    <input type="text" name="aurl" placeholder="Anchor URL" required="required" />
+    <input type="text" name="link" placeholder="Tag Links" required="required" />
+    <input type="text" name="server" placeholder="Server Form Handler" required="required" />
+    <input type="text" name="Email" placeholder="Email" required="required" />
+    <input type="text" name="aurl" placeholder="Abnormal URL" required="required" />
+    <input type="text" name="forward" placeholder="Website Forwarding" required="required" />
+    <input type="text" name="status" placeholder="status Bar" required="required" />
+    <input type="text" name="right" placeholder="Disable Right Click" required="required" />
+    <input type="text" name="pop" placeholder="Using Pop up window" required="required" />
+    <input type="text" name="ir" placeholder="IFramed redirection" required="required" />
+    <input type="text" name="age" placeholder="Age of domain" required="required" />
+    <input type="text" name="dns" placeholder="DNS recording" required="required" />
+    <input type="text" name="wt" placeholder="Web Traffic" required="required" />
+    <input type="text" name="pr" placeholder="Page Rank" required="required" />
+    <input type="text" name="gi" placeholder="Google Index" required="required" />
+    <input type="text" name="point" placeholder="Links pointing towards" required="required" />
+    <input type="text" name="stat" placeholder="Stats Report" required="required" />
+    
+  
+ 
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+   <h1>{{ prediction_text }}</h1>
+
+  
+ </div>
+
+
+</body>
+</html>
